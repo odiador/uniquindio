@@ -1,0 +1,153 @@
+#label-opciones-principal{
+	-fx-text-fill: rgb(255.0,255.0,255.0);
+
+	-fx-font-size: 25.0;
+	-fx-pref-height: 50.0;
+	-fx-alignment: center;
+	-fx-max-width: 100000.0;
+	-fx-font-weight: bold;
+}
+#impresion {
+    -gradient-base: blue;
+    -fx-text-fill: linear-gradient(to right, -gradient-base, #1e5be8);
+    -fx-font-weight: bold;
+}
+#tabla-true {
+	-fx-background-color: #baffba;
+	-fx-text-fill: black;
+}
+
+#tabla-true:selected {
+    -fx-background-color: #00a600;
+    -fx-text-fill: white;
+}
+
+#tabla-false {
+	-fx-background-color: #ffbaff;
+	-fx-text-fill: black;
+}
+
+#tabla-false:selected {
+    -fx-background-color: #a60000;
+    -fx-text-fill: white;
+}
+
+#btn-tabla {
+	-fx-background-color: rgb(0.0,0.0,0.0,0.1);
+}
+#btn-tabla:hover {
+	-fx-background-color: rgb(0.0,0.0,0.0,0.2);
+}
+#btn-tabla:pressed {
+	-fx-background-color: rgb(0.0,0.0,0.0,0.3);
+}
+#checkbox {
+	-fx-pref-width: 100.0;
+	-fx-background-color: rgb(255.0,0.0,0.0);
+	-fx-cursor: hand;
+}
+#checkbox .box {
+	-fx-pref-width: 100.0;
+	-fx-background-color: rgb(0.0,0.0,0.0,0.0);
+}
+#checkbox .mark {
+	-fx-background-color: rgb(0.0,0.0,0.0,0.0);
+}
+#checkbox:hover .box {
+	-fx-background-color: rgb(0.0,0.0,0.0,0.1);
+}
+#checkbox:selected {
+	-fx-background-color: rgb(0.0,255.0,0.0);
+}
+#tabpane {
+}
+#label-opciones-principal:hover {
+	-fx-background-color: rgb(0.0,0.0,0.0,0.2)
+}
+
+#label-opciones-principal:pressed {
+	-fx-background-color: rgb(0.0,0.0,0.0,0.3);
+}
+#header-text {
+	-fx-text-fill: white;
+	-fx-font-weight: bold;
+}
+#vbox-principal {
+	-fx-background-color: linear-gradient(from 0.0% 0.0% to 0.0% 100.0%,
+		#3333ff 50.0%,
+		#020106 150.0%
+	);
+	-fx-border-width: 10.0px;
+	-fx-border-style: solid inside;
+	-fx-border-color: rgb(0.0,0.0,0.0,0.2);
+
+	-fx-pref-width: 250.0;
+}
+#btn {
+	-fx-ellipsis-string: "";
+	-fx-alignment: center;
+	-fx-font-size: 20.0;
+	-fx-arc-width: 3.0;
+	-fx-max-width: 1000000.0;
+	-fx-max-height: 1000000.0;
+	-fx-text-fill: white;
+	-fx-font-weight: bold;
+}
+#btn-case {
+	-fx-background-color: #461ee8;
+	-fx-max-width: 400.0;
+	-fx-pref-height: 40.0;
+	-fx-fit-to-width: true;
+	-fx-arc-width: 3.0;
+}
+#btn:hover {
+	-fx-background-color: rgb(0.0,0.0,0.0,0.3)
+}
+
+#btn:pressed {
+	-fx-background-color: rgb(0.0,0.0,0.0,0.4);
+}
+
+#btn-volver {
+	-fx-alignment: center;
+	-fx-max-width: 1000000.0;
+	-fx-pref-height: 30.0;
+	-fx-background-color: #e81e5b;
+}
+
+#btn-volver:hover {
+	-fx-background-color: #b81345;
+}
+#btn-volver:pressed {
+	-fx-background-color: #950f38;
+}
+#header {
+	-fx-alignment: center;
+	-fx-pref-height: 200.0;
+}
+#lbl-error {
+	-fx-background-color: red;
+}
+#centered-box {
+	-fx-alignment: center;
+}
+#boton-opcion {
+	-fx-ellipsis-string: "";
+	-fx-alignment: center;
+	-fx-font-size: 25.0;
+	-fx-background-color: rgb(30.0,91.0,232.0);
+	-fx-font-weight: bold;
+	-fx-text-fill: white;
+	-fx-pref-height: 40.0;
+	-fx-pref-width: 300.0;
+	-fx-arc-width: 3.0;
+	-fx-fit-to-width: true;
+}
+
+
+#boton-opcion:hover {
+	-fx-background-color: rgb(21.0,75.0,220.0);
+}
+#boton-opcion:pressed {
+	-fx-background-color: rgb(17.0,62.0,167.0);
+}

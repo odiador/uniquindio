@@ -1,0 +1,89 @@
+@startuml Diagram
+
+skinparam Linetype ortho
+skinparam style strictuml
+
+skinparam Class {
+    FontName Arial
+    FontSize 15
+
+    BorderColor DarkBlue
+    BackgroundColor APPLICATION
+    BorderThickness 3
+    ArrowColor DarkBlue
+    ArrowThickness 2
+    HeaderBackgroundColor Aquamarine
+}
+
+enum AccountType <<enumeration>> {
+    CORRIENTE
+    AHORROS
+}
+
+class Bank {
+    -name : String
+    -code : String
+
+    +getName()
+    +setName(String)
+    +getCode()
+    +setCode(String)
+
+    +addBankAccount(String, String, String, AccountType)
+    +removeBankAccount(String)
+    +searchBankAccount(String)
+    +validateBankAccount(String)
+    +addClient(String, String, String)
+    +removeClient(String)
+    +searchClient(String)
+    +validateClient(String)
+    +sendBalance(String, String, Double)
+    +compareBalance(String, String)
+    +withdrawBalance(String, Double)
+    +consignBalance(String, Double)
+}
+
+class BankException <<exception>> {
+    +BankException(msg: String)
+}
+
+class Client {
+    -name : String
+    -lastname : String
+    -code : String
+
+    +getName()
+    +getLastName()
+    +getCode()
+
+    +setName(String)
+    +setLastName(String)
+    +setCode(String)
+
+    +addBankAccount(BankAccount)
+    +removeBankAccount(String)
+    +searchBankAccount(String)
+    +validateBankAccount(String)
+}
+
+class BankAccount {
+    -accountNumber : String
+
+    +getAccountNumber()
+    +setAccountNumber(String)
+    +getAccountType()
+    +setAccountType(String)
+    +consignBalance(Double)
+    +withDrawBalance(Double)
+    +compareBalanceTo(BankAccount)
+    +sendBalance(BankAccount, Double)
+}
+
+Bank " 1 " o--down- " * " BankAccount : - bankAccountList
+Bank " 1 " o-down- " * " Client : - clientList
+BankAccount " 1 " -up-> " 1 "  Client : - owner
+Client " 1 " o--down- " * " BankAccount : - bankAccountList
+BankAccount -up-> " 1 " AccountType : - accountType
+Client ..> BankException : <<send>>
+Bank ..> BankException : <<send>>
+@enduml
