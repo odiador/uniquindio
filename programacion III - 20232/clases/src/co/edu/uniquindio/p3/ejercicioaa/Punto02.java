@@ -1,6 +1,13 @@
-package co.edu.uniquindio.p3.temas.recursividad;
+package co.edu.uniquindio.p3.ejercicioaa;
 
-public class Ej05 {
+/**
+ * División de un número entre otro mediante restas sucesivas.
+ * 
+ * @author amador
+ *
+ */
+public class Punto02 {
+
 	public static int dividirNumerosRestas(int a, int b) {
 		return dividirNumerosRestasAux(a, b, 0);
 	}
@@ -14,4 +21,5 @@ public class Ej05 {
 	public static void main(String[] args) {
 		System.out.println(dividirNumerosRestas(34, 5));
 	}
+
 }

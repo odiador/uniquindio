@@ -1,6 +1,14 @@
-package co.edu.uniquindio.p3.temas.recursividad;
+package co.edu.uniquindio.p3.ejercicioaa;
 
-public class Ej06 {
+/**
+ * Sumar todos los números impares hasta n. Donde n es un número que se pasa
+ * como parámetro.
+ * 
+ * @author amador
+ *
+ */
+public class Punto03 {
+
 	public static int sumarNumsImparesN(int n) {
 		return sumarNumsImparesNAux(n, 1, 0);
 	}

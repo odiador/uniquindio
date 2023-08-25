@@ -1,6 +1,13 @@
-package co.edu.uniquindio.p3.temas.recursividad;
+package co.edu.uniquindio.p3.ejercicioaa;
 
-public class Ej04 {
+/**
+ * Multiplicar dos números mediante sumas sucesivas.
+ * 
+ * @author amador
+ *
+ */
+public class Punto01 {
+
 	public static int multiplicarNumerosSumas(int a, int b) {
 		return multiplicarNumerosSumasAux(a, b, 0, 0);
 	}
@@ -14,4 +21,5 @@ public class Ej04 {
 	public static void main(String[] args) {
 		System.out.println(multiplicarNumerosSumas(5, 27));
 	}
+
 }
