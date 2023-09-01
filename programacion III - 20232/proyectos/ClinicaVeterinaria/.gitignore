@@ -1,0 +1,15 @@
+
+workspace/.metadata
+workspace/clinicaVeterinaria/RUNNING_PID
+workspace/clinicaVeterinaria/logs/jpro.warn.log
+workspace/clinicaVeterinaria/logs/jpro.info.log
+workspace/clinicaVeterinaria/logs/jpro.error.log
+workspace/clinicaVeterinaria/logs/jpro.console.log
+workspace/clinicaVeterinaria/logs/jpro.activity.log
+workspace/clinicaVeterinaria/.idea/compiler.xml
+workspace/clinicaVeterinaria/.idea/misc.xml
+workspace/clinicaVeterinaria/.idea/workspace.xml
+workspace/clinicaVeterinaria/.idea/encodings.xml
+workspace/clinicaVeterinaria/.idea/jarRepositories.xml
+workspace/clinicaVeterinaria/.idea/vcs.xml
+workspace/clinicaVeterinaria/bin/
