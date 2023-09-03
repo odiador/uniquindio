@@ -1,0 +1,55 @@
+.mainpane {
+	-fx-background-color: black;
+}
+.label {
+	-fx-text-fill: white;
+}
+.table-view {
+	-fx-background-color: transparent;
+	-fx-border-color: #F0F0F0;
+}
+.table-row-cell:selected .cell {
+	-fx-background-color: #4F8AFF;
+	-fx-text-fill: black;
+}
+.columna-tabla {
+	-fx-border-color: white;
+	-fx-background-color: black;
+}
+.columna-tabla .arrow{
+	-fx-background-color: white;
+	
+}
+.columna-tabla > .label {
+	-fx-text-fill: white;
+}
+.table-view .cell {
+	-fx-text-fill: white;
+}
+.table-view:focused {
+	-fx-border-width: 3.0;
+	-fx-border-color: #4F8AFF;
+}
+.table-view > .filler {
+    -fx-background-color: transparent;
+}
+#btn-tabla {
+	-fx-background-color: #5d14ff;
+}
+
+#btn-tabla:hover {
+	-fx-background-color: #783bff;
+}
+#btn-tabla:pressed {
+	-fx-background-color: #4300d8;
+}
+.cell {
+	-fx-background-color: #505050;
+}
+.table-row-cell:odd .cell{
+	-fx-background-color: #656565;
+}
+.table-row-cell:selected .cell {
+	-fx-background-color: #4F8AFF;
+	-fx-text-fill: black;
+}

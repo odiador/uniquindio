@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="746.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <HBox fx:id="boxTodoLogo" alignment="CENTER" maxHeight="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER" maxHeight="200.0" prefHeight="200.0" prefWidth="0.0" HBox.hgrow="NEVER">
+               <children>
+                  <ImageView fx:id="imgC" fitHeight="1.0" fitWidth="1.0" opacity="0.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                     <image>
+                        <Image url="@../../../../../resources/images/Letra%20C.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" maxHeight="200.0" prefWidth="0.0" HBox.hgrow="NEVER">
+               <children>
+                  <ImageView fx:id="imgA" fitHeight="1.0" fitWidth="1.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../resources/images/Letra%20A.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" maxHeight="200.0" prefWidth="0.0" HBox.hgrow="NEVER">
+               <children>
+                  <ImageView fx:id="imgR1" fitHeight="1.0" fitWidth="1.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../resources/images/Letra%20R.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" maxHeight="200.0" prefWidth="0.0" HBox.hgrow="NEVER">
+               <children>
+                  <ImageView fx:id="imgR2" fitHeight="1.0" fitWidth="1.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../resources/images/Letra%20R.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+            <VBox fx:id="contenedorO" alignment="CENTER" maxHeight="200.0" opacity="0.0" HBox.hgrow="NEVER">
+               <children>
+                  <ImageView fx:id="imgLlanta" fitHeight="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../resources/images/Letra%20O.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" maxHeight="200.0" HBox.hgrow="NEVER">
+               <children>
+                  <ImageView fx:id="imgU" fitHeight="1.0" fitWidth="1.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../resources/images/Letra%20U.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" maxHeight="200.0" HBox.hgrow="NEVER">
+               <children>
+                  <ImageView fx:id="imgQ" fitHeight="1.0" fitWidth="1.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../resources/images/Letra%20Q.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </center>
+</BorderPane>

@@ -1,0 +1,38 @@
+#root{
+	-fx-background-color: black;
+}
+
+#titulo{
+	-fx-font-size:2em;
+}
+
+.texto{
+	-fx-text-fill: white;
+	-fx-font-weight: bold;
+	-fx-font-size:1.5em;
+}
+
+.cajas{
+	-fx-background-color: transparent;
+	-fx-border-color: transparent, gray;
+	-fx-border-width: 0 0 0 0, 0 0 1 0, 0 0 1 0; 
+	-fx-border-insets: 0 0 1 0, 0 0 2 0, 0 0 3 0;
+	-fx-text-fill: white;
+	-fx-font-weight: bold;
+}
+
+.combos{
+	-fx-border-color: white;
+	-fx-background-color: black;
+	-fx-prompt-text-fill: red;
+}
+
+.combos .list-cell{
+	-fx-text-fill: white;
+	-fx-background-color: black;
+}
+
+.combos .list-cell:hover{
+	-fx-border-color: white;
+}
+

@@ -1,0 +1,7 @@
+.text-field {
+	-fx-background-color: #9999ff;
+	-fx-text-fill: black;
+	-fx-pref-width: 1000000.0;
+	-fx-prompt-text-fill: #393939;
+	-fx-shape: "m 0 0 v 100 h 95 a 1 10 0 0 0 0 -100 z";
+}

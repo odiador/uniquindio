@@ -1,0 +1,12 @@
+.text-field {
+	-fx-background-color: #707070;
+	-fx-text-fill: #707070;
+	-fx-max-width: 1000000.0;
+	-fx-prompt-text-fill: #393939;
+	-fx-shape: "m 0 0 l 1 0 m 0 100 h 100 v -5 h -100 z";
+}
+.text-field:focused {
+	-fx-background-color: white;
+	-fx-prompt-text-fill: #707070;
+	-fx-text-fill: white;
+}

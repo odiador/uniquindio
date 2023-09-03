@@ -1,0 +1,16 @@
+.btnsAgregar{
+	-fx-background-color: white;
+	-fx-font-weight: bold;
+	-fx-background-radius: 0;
+	-fx-font-size: 2em;
+	-fx-effect: dropshadow(gaussian, crimson, 1em, 0.3, 0.0, 0.0);
+	
+}
+
+.btnsAgregar:hover{
+	-fx-background-color: #E0E0E0;
+	-fx-effect: dropshadow(gaussian, crimson, 1em, 0.5, 0.0, 0.0);
+}
+.btnsAgregar:pressed{
+	-fx-background-color: #C0C0C0;
+}

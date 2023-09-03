@@ -1,0 +1,13 @@
+#root{
+	-fx-background-color: black;
+}
+
+#titulo{
+	-fx-font-size:2em;
+}
+
+.texto{
+	-fx-text-fill: white;
+	-fx-font-weight: bold;
+	-fx-font-size:1.5em;
+}

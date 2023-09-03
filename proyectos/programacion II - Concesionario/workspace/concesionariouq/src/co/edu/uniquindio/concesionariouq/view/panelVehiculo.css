@@ -1,0 +1,28 @@
+.scroll-pane {
+	-fx-border-color: transparent;
+}
+.grid-campos {
+	-fx-background-color: black;
+}
+.imagen {
+	-fx-alignment: center;
+}
+.root {
+	-fx-background-color: black;
+}
+.grid-campos .label {
+	-fx-text-fill: white;
+}
+.check-box {
+	-fx-text-fill: white;
+}
+.button {
+	-fx-background-color: white;
+	-fx-effect: innershadow(gaussian, rgba(0.0, 0.0, 0.0, 0.3), 10.0, 0.5, 0.0, 0.0);
+}
+.button:hover {
+	-fx-background-color: #d6d6d6;
+}
+.button:pressed {
+	-fx-background-color: #b9b9b9; 
+}

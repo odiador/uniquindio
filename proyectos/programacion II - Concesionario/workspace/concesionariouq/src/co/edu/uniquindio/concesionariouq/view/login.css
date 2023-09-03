@@ -1,0 +1,29 @@
+.mainpane {
+	-fx-background-color: black;
+}
+.label {
+	-fx-text-fill: white;
+	-fx-font-weight: bold;
+}
+.button {
+	-fx-background-color: white;
+	-fx-effect: dropshadow(gaussian, crimson, 1em, 0.3, 0.0, 0.0);
+	-fx-font-weight: bold;
+}
+.button:hover {
+	-fx-background-color: #d6d6d6;
+	-fx-effect: dropshadow(gaussian, crimson, 1em, 0.4, 0.0, 0.0);
+}
+.button:pressed {
+	-fx-background-color: #b9b9b9; 
+}
+.hipervinculo {
+	-fx-text-fill: white;
+	-fx-border-width: 0.0;
+}
+.hipervinculo:hover {
+	-fx-text-fill: #9bb6f5;
+}
+.hipervinculo:pressed {
+	-fx-text-fill: #5382ed;
+}

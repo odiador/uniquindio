@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane id="root" fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="416.0" prefWidth="600.0" styleClass="mainpane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <bottom>
+      <HBox alignment="CENTER" spacing="10.0">
+         <children>
+            <Button cancelButton="true" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#volverEvent" styleClass="botones" stylesheets="@sources/registerStyle.css" text="Volver" HBox.hgrow="ALWAYS" />
+            <Button defaultButton="true" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#registrarEvent" styleClass="botones" stylesheets="@sources/registerStyle.css" text="Registrar" HBox.hgrow="ALWAYS" />
+         </children>
+         <VBox.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+   </bottom>
+   <stylesheets>
+      <URL value="@login.css" />
+      <URL value="@addscroll.css" />
+   </stylesheets>
+   <center>
+      <BorderPane BorderPane.alignment="CENTER">
+         <center>
+            <ScrollPane fitToHeight="true" fitToWidth="true">
+               <content>
+                  <GridPane id="container" alignment="CENTER" styleClass="grid-campos" stylesheets="@sources/registerStyle.css" BorderPane.alignment="CENTER">
+                    <columnConstraints>
+                      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="40.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="40.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="40.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="40.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="40.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="40.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="40.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="40.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="40.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Hyperlink onAction="#irIniciarSesionEvent" styleClass="hipervinculo" text="¿Ya tienes una cuenta? Inicia sesion aqui" underline="true" GridPane.columnSpan="2" />
+                        <Label styleClass="texto" stylesheets="@sources/registerStyle.css" text="Ingresa tu identificacion:" GridPane.rowIndex="1" />
+                        <TextField fx:id="txtId" promptText="Identificacion" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets right="20.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <Label styleClass="texto" stylesheets="@sources/registerStyle.css" text="Ingresa tu Nombre:" GridPane.rowIndex="2" />
+                        <TextField fx:id="txtNombre" promptText="Nombre" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets right="20.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <Label styleClass="texto" stylesheets="@sources/registerStyle.css" text="Ingresa tu Email:" GridPane.rowIndex="3" />
+                        <TextField fx:id="txtEmail" promptText="Email" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets right="20.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <Label styleClass="texto" stylesheets="@sources/registerStyle.css" text="Ingresa tu Contraseña:" GridPane.rowIndex="4" />
+                        <PasswordField fx:id="txtContrasena" promptText="Contraseña" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <GridPane.margin>
+                              <Insets right="20.0" />
+                           </GridPane.margin>
+                        </PasswordField>
+                        <Label text="Pregunta de seguridad:" GridPane.columnSpan="2" GridPane.rowIndex="5">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label styleClass="texto" text="¿Cuál es el nombre de tu madre?" GridPane.rowIndex="6" />
+                        <TextField fx:id="txtRespuesta" promptText="Nombre de tu madre" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                           <GridPane.margin>
+                              <Insets right="20.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <Label layoutX="52.0" layoutY="300.0" text="Elige si es empleado o admin" GridPane.rowIndex="7" />
+                        <ComboBox fx:id="comboTipoEmpleado" maxWidth="1.7976931348623157E308" promptText="Elige un tipo" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                           <GridPane.margin>
+                              <Insets right="20.0" />
+                           </GridPane.margin>
+                        </ComboBox>
+                        <Label text="Elige la imagen del empleado" GridPane.rowIndex="8" />
+                        <Button fx:id="btnElegirImagen" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#elegirImagenEvent" text="Elegir imagen" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                           <GridPane.margin>
+                              <Insets right="20.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <Label text="Vista previa de la imagen" GridPane.rowIndex="9" />
+                        <ImageView fx:id="imagenEmpleado" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="9">
+                           <image>
+                              <Image url="@../../../../../resources/images/UnknownPerson.png" />
+                           </image>
+                           <GridPane.margin>
+                              <Insets right="20.0" />
+                           </GridPane.margin>
+                        </ImageView>
+                     </children>
+                  </GridPane>
+               </content>
+               <BorderPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </BorderPane.margin>
+            </ScrollPane>
+         </center>
+      </BorderPane>
+   </center>
+   <top>
+      <VBox alignment="TOP_CENTER" centerShape="false" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="100.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../resources/images/Logo%20fondo%20oscuro.png" />
+               </image>
+            </ImageView>
+            <Label id="titulo" styleClass="texto" stylesheets="@sources/registerStyle.css" text="Registro de Empleado Carro UQ" />
+         </children>
+      </VBox>
+   </top>
+</BorderPane>

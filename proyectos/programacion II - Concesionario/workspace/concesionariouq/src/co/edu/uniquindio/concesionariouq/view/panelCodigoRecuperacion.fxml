@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="340.0" prefWidth="600.0" styleClass="mainpane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <VBox alignment="CENTER">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+               <image>
+                  <Image url="@../../../../../resources/images/Logo%20fondo%20oscuro.png" />
+               </image>
+            </ImageView>
+            <Label style="-fx-font-size: 26;" text="Codigo de recuperación">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <GridPane alignment="CENTER" maxHeight="-Infinity" prefHeight="200.0" style="-fx-background-color: #060028; -fx-background-radius: 20; -fx-border-color: white; -fx-border-radius: 20;" vgap="20.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="TOP" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <HBox alignment="BOTTOM_CENTER" GridPane.columnSpan="2">
+               <children>
+                  <Label text="ID: " />
+                  <Label fx:id="lblIdentificacion" text="identificacion" />
+               </children>
+            </HBox>
+            <Label text="Ingresa el codigo de 6 letras" GridPane.rowIndex="1" />
+            <HBox alignment="TOP_CENTER" GridPane.columnSpan="2" GridPane.rowIndex="2">
+               <children>
+                  <Label text="Tiempo restante: " GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                  <Label fx:id="lblTiempo" text="99:99" />
+               </children>
+            </HBox>
+            <TextField fx:id="txtCodigo" promptText="Ingresa el código" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+         <effect>
+            <InnerShadow color="WHITE" height="30.0" radius="14.5" width="30.0" />
+         </effect>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </GridPane>
+   </center>
+   <bottom>
+      <HBox spacing="30.0">
+         <children>
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#volverEvent" text="Volver" BorderPane.alignment="CENTER" HBox.hgrow="ALWAYS" />
+            <Button fx:id="btnOtroCodigo" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#otroCodigoEvent" text="Enviar otro código" HBox.hgrow="ALWAYS" />
+            <Button fx:id="btnRecuperarContrasena" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#recuperarContrasenaEvent" text="Recuperar Contraseña" HBox.hgrow="ALWAYS" />
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+      </HBox>
+   </bottom>
+   <stylesheets>
+      <URL value="@login.css" />
+      <URL value="@sources/textfieldStyle.css" />
+   </stylesheets>
+</BorderPane>

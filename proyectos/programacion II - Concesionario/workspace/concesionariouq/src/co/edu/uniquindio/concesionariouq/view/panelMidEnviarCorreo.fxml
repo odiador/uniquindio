@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="mainPane" alignment="CENTER" prefHeight="324.0" prefWidth="466.0" style="-fx-background-color: black;" stylesheets="@sources/btnStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox fx:id="boxImg" alignment="BOTTOM_CENTER" VBox.vgrow="ALWAYS">
+         <children>
+            <ImageView fx:id="imgLogo" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+               <image>
+                  <Image url="@../../../../../resources/images/Logo%20fondo%20oscuro.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <HBox alignment="TOP_CENTER" VBox.vgrow="ALWAYS">
+         <children>
+            <Label fx:id="labelEnviando" text="Enviando correo" textFill="WHITE" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblDots" text="..." textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <BorderPane>
+         <bottom>
+            <Button fx:id="btnVolver" cancelButton="true" mnemonicParsing="false" onAction="#volverEvent" opacity="0.0" style="-fx-font-size: 15;" styleClass="btnsAgregar" text="Volver" BorderPane.alignment="CENTER" />
+         </bottom>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </BorderPane>
+   </children>
+</VBox>

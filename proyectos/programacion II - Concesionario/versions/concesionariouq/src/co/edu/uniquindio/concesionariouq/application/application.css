@@ -1,0 +1,53 @@
+
+#raiz {
+	-fx-background-color: #444444;
+}
+.root {
+	-fx-background-color: #444444;
+}
+.check-box {
+	-fx-text-fill: white;
+}
+.label {
+	-fx-text-fill: white;
+}
+#menu-opciones-izq {
+	-fx-background-color: #000099;	
+}
+#centered-box {
+	-fx-alignment: center;
+}
+.boton-menu {
+	-fx-max-width: 1000000.0;
+	-fx-font-weight: bold;
+	-fx-alignment: center;
+	-fx-padding: 1.0em;
+	-fx-font-size: 1.0em;
+	-fx-text-fill: white;
+
+}
+#btn-case {
+	-fx-background-color: #000000;
+}
+#btn {
+	-fx-ellipsis-string: "";
+	-fx-alignment: center;
+	-fx-text-fill: white;
+	-fx-font-weight: bold;
+	-fx-font-size: 20.0;
+	-fx-max-width: 1000000.0;
+	-fx-max-height: 1000000.0;
+}
+#btn:hover {
+	-fx-background-color: rgb(255.0,255.0,255.0,0.1);
+}
+#btn:pressed {
+	-fx-background-color: rgb(255.0,255.0,255.0,0.2);
+}
+
+.boton-menu:hover {
+	-fx-background-color: rgb(255.0,255.0,255.0,0.2);
+}
+.boton-menu:pressed {
+	-fx-background-color: rgb(255.0,255.0,255.0,0.3);
+}

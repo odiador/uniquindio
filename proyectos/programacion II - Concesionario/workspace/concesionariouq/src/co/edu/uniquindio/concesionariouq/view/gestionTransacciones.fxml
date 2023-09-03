@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.net.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="mainPane" styleClass="mainpane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <TableView fx:id="tablaTransacciones" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="columFecha" prefWidth="75.0" styleClass="columna-tabla" text="Fecha" />
+          <TableColumn fx:id="colHora" prefWidth="75.0" styleClass="columna-tabla" text="Hora" />
+            <TableColumn fx:id="columValor" prefWidth="75.0" styleClass="columna-tabla" text="Valor" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+      </TableView>
+   </center>
+   <top>
+      <VBox alignment="CENTER">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+               <image>
+                  <Image url="@../../../../../resources/images/Logo%20fondo%20oscuro.png" />
+               </image>
+            </ImageView>
+            <Label text="Gestión de Transacciones">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+   </top>
+   <bottom>
+      <Button layoutX="297.0" layoutY="10.0" maxWidth="1.7976931348623157E308" minHeight="30.0" mnemonicParsing="false" onAction="#volverEvent" style="-fx-font-size: 15;" styleClass="btnsAgregar" text="Volver" GridPane.columnSpan="2" GridPane.rowIndex="1">
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+      </Button>
+   </bottom>
+   <stylesheets>
+      <URL value="@sources/tableStyle.css" />
+      <URL value="@sources/btnStyle.css" />
+   </stylesheets>
+</BorderPane>

@@ -1,0 +1,42 @@
+#root{
+	-fx-background-color: #FFFFFF;
+}
+
+#panelIzq{
+	-fx-background-color: black;
+}
+.btnsPrincipales{
+	-fx-background-color: black;
+	-fx-font-weight: bold;
+	-fx-text-fill: white;
+	-fx-background-radius: 0.0;
+	-fx-font-size: 1.5em;
+}
+
+.btnsPrincipales:hover{
+	-fx-background-color: #3C3C3C;
+}
+
+.btnsPrincipales:pressed{
+	-fx-background-color: #808080;
+}
+
+#imgEmployee{
+	-fx-border-color: black;
+	-fx-background-color: black;
+	-fx-border-width: 1.0em;
+}
+
+#imgLogo{
+	-fx-background-color: black;
+}
+
+.separator .line{
+	-fx-border-color: null;
+	-fx-background-color: #ce3126;
+	-fx-pref-height: 1;
+}
+.split-pane-divider {
+	-fx-background-color: #ce3126;
+	-fx-pref-width: 2;
+}

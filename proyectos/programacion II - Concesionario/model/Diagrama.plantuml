@@ -1,0 +1,216 @@
+@startuml Hola
+
+skinparam style strictuml
+skinparam ArrowThickness 2
+skinparam Linetype ortho
+
+skinparam Class {
+    FontSize 15
+    BorderColor Black
+    BackgroundColor Lavender
+    BorderThickness 3
+}
+
+interface PuedeTenerVehiculo <<interface>> {
+    + <i>venderVehiculo(placa: String)
+    + <i>comprarVehiculo(vehiculo: Vehiculo)
+}
+class Concesionario {
+    - nombre : String
+    - direccion : String
+
+    + registrarVehiculo()
+    + venderVehiculo()
+    + agregarTransaccion()
+    + agregarDetalleTransaccion()
+    + generarReporte()
+    + agregarFoto()
+    + enviarEmailRecuperacion()
+}
+
+class Transaccion {
+    - codigo : String
+    + agregarDetalleTransaccion(TipoTransaccion)
+}
+enum TipoTransaccion <<enumeration>> {
+    VENTA
+    ALQUILER
+    COMPRA
+}
+class DetalleTransaccion {
+    - vehiculo : Vehiculo
+    - codigoTransaccion : String
+
+}
+
+
+abstract class Usuario  <<abstract>> {
+    - nombre : String
+    - id : String
+    - contrasena : String
+    - email : String
+    +<i>obtenerOpcionesDiponibles</i>()
+}
+
+class Cliente {
+    + alquilarVehiculo()
+    +obtenerOpcionesDiponibles()
+}
+
+class Empleado {
+    + registrarVehiculo()
+    + registrarCliente()
+    + venderVehiculo()
+    + comprarVehiculo()
+    + agregarTransaccion()
+    +obtenerOpcionesDiponibles()
+}
+
+class Administrador {
+    + registrarEmpleado()
+    + eliminarEmpleado()
+    + actulizarEmpleado()
+    + bloquearEmpleado()
+    + generarReporte()
+    + recuperarContrasena()
+    +obtenerOpcionesDiponibles()
+
+}
+
+class UsuarioCompleto{
+    +obtenerOpcionesDiponibles()
+}
+
+abstract class Combustible <<abstract>> {
+}
+
+class Gasolina {
+}
+
+class Diesel {
+}
+
+class Electrico {
+    - autonomiaCargaCompleta : Double
+    - tiempoDemoraCarga : Double
+}
+class Hibrido {
+    - esEnchufable : Boolean
+    - esHibridoLigero : Boolean
+}
+
+abstract class Vehiculo <<abstract>> {
+    - placa : String
+    - marca : String
+    - modelo : String
+    - cilindraje: Double
+    - velocidadMaxima : Double
+}
+
+abstract class Automovil <<abstract>> {
+    - numeroPasajeros : Integer
+    - numeroBolsasAire : Integer
+    - numeroPuertas : Integer
+}
+
+enum EstadoVehiculo <<enumeration>>{
+    NUEVO
+    USADO
+}
+
+enum TipoCambio <<enumeration>> {
+    MANUAL
+    AUTOMATICO
+}
+
+class Sedan {
+    - tieneVelocidadCrucero : Boolean
+    - tieneSensorColision : Boolean
+    - tieneSensorTrafico : Boolean
+    - tieneAsistentePermanencia : Boolean
+}
+
+class Deportivo {
+    - numeroCaballosFuerza : Integer
+    - tiempoAlcanza100Kmh : Integer
+}
+
+class Camioneta {
+    - es4x4 : Boolean
+}
+
+class PickUp {
+    - es4x4 : Boolean
+    - capacidadCajaCarga : Double
+}
+
+abstract class Familiar <<abstract>> {
+    - tieneAireAcondicinado : Boolean
+    - tieneCamaraReversa : Boolean
+    - tieneABS : Boolean
+}
+
+class Van {
+    - capacidadMaletero : Double
+}
+
+class Bus {
+    - numeroEjes : Integer
+    - numeroSalidasEmergencia : Integer
+}
+
+class Camion {
+    - capacidadCarga : Double
+    - tieneAireAcondicinado : Boolean
+    - tieneFrenosAire : Boolean
+    - tieneABS : Boolean
+    - numeroEjes : Integer
+    - tipoCamion : String
+}
+
+class Moto {
+}
+
+'Concesionario
+Concesionario "1" *--> "*" Usuario : - listaUsuarios
+Concesionario "1" *-> "*" Transaccion : - listaTransacciones
+Concesionario "1" *--> "*" Cliente : - listaClientes
+Concesionario  "1" o--> "*" Vehiculo : - listaVehiculos
+Transaccion  "1  '" o--> "*" DetalleTransaccion : -  listaDetalleTransacciones
+'Transaccion
+DetalleTransaccion "1"--> TipoTransaccion : - tipo
+
+'Gasolina
+Hibrido -up-|> Combustible
+Gasolina -left-|> Combustible
+Electrico -right-|> Combustible
+Diesel -down-|> Combustible
+
+'Vehiculos
+Vehiculo "1" -right-> TipoCambio : - tipo
+Vehiculo "1" -down-> Combustible : - combustible
+Vehiculo "1" -left-> EstadoVehiculo : - estado
+
+Automovil -left-|> Vehiculo
+Moto --|> Vehiculo
+Camion -down-|> Vehiculo
+
+Deportivo -up-|> Automovil
+Familiar -down-|> Automovil
+Camioneta -down-|> Sedan
+PickUp -left-|> Familiar
+Van -right-|> Familiar
+Bus -down-|> Van
+Sedan -down-|> Van
+
+'Usuarios
+Usuario  "1" o--> "*" Vehiculo : - listaVehiculos
+Administrador "1" o-down- "*" Empleado : -listaEmpleados
+Cliente -down-|> Usuario
+Empleado -down-|> Usuario
+Administrador -down-|> Empleado
+Concesionario .left.|> PuedeTenerVehiculo
+Cliente .left.|> PuedeTenerVehiculo
+UsuarioCompleto -|> Usuario 
+
+@enduml
