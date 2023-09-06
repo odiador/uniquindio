@@ -10,7 +10,7 @@ package co.edu.uniquindio.p3.tallerrepaso1;
  */
 public class Punto01 {
 	public static void main(String[] args) {
-		int n = 16;
+		int n = 2048;
 		int k = 2;
 		boolean esPotencia = esPotencia(n, k);
 		System.out.println(esPotencia);
@@ -24,10 +24,14 @@ public class Punto01 {
 	 * @return true si n es potencia de k
 	 */
 	private static boolean esPotencia(int n, int k) {
-		if (k == n)
+		return esPotenciaAux(n, k, 1);
+	}
+
+	private static boolean esPotenciaAux(int n, int k, int resultado) {
+		if (resultado == n)
 			return true;
-		if (k > n)
+		if (resultado > n)
 			return false;
-		return esPotencia(n, k * k);
+		return esPotenciaAux(n, k, resultado * k);
 	}
 }
