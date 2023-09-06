@@ -9,7 +9,7 @@ package co.edu.uniquindio.p3.tallerrepaso1;
  */
 public class Punto06 {
 	public static void main(String[] args) {
-		final int[] numeros = { 4, 7, 2, 10, 1, 9, 5, 8, 3, 6 }; // 1 cuenta como primo
+		final int[] numeros = { 4, 7, 2, 10, 1, 9, 5, 8, 3, 6 }; // 1 no cuenta como primo
 		int contarPrimos = contarPrimosEnArr(numeros);
 		System.out.println(contarPrimos);
 	}
@@ -25,6 +25,8 @@ public class Punto06 {
 	}
 
 	public static boolean esPrimo(int num) {
+		if (num == 1)
+			return false;
 		return esPrimoAux(num, 2);
 	}
 
