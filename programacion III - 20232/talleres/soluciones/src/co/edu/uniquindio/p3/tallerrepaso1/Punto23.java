@@ -1,7 +1,5 @@
 package co.edu.uniquindio.p3.tallerrepaso1;
 
-import java.util.Arrays;
-
 /**
  * La búsqueda binaria implica que un array esté ordenado, y el algoritmo
  * consiste en dividir el array por su elemento medio en dos subarrays más
