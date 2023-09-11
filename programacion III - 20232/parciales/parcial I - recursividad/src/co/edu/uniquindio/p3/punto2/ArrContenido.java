@@ -25,7 +25,7 @@ public class ArrContenido {
 		 * No fue así en el parcial, en caso de que a sea {1,2,3,3,4} y b {3,4} daba
 		 * false: if (a[i] == b[0]) return isContenidoAux2(a, b, i, 1);
 		 */
-		if (a[i] == b[0] && isContenidoAux2(a, b, i, 1))
+		if (a[i] == b[0] && isContenidoAux2(a, b, i + 1, 1))
 			return true;
 		return isContenidoAux(a, b, i + 1);
 	}
