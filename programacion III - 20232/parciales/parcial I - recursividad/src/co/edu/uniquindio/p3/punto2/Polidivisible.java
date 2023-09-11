@@ -1,9 +1,41 @@
 package co.edu.uniquindio.p3.punto2;
 
+/**
+ * 
+ * Escriba un metood que determine la cantidad de numeros de un arreglo que son
+ * polidivisibles. No tome el numero como String
+ * 
+ * @author Amador (Corem05) y Santiago (Tourment0412)
+ *
+ */
 public class Polidivisible {
 	public static void main(String[] args) {
-		boolean poli = esPolidivisible(3036);
-		System.out.println(poli);
+		int arr[] = { 3036, 28, 20, 100, 204 };
+		System.out.println(contarPolidivisiblesArr(arr));
+	}
+
+	/**
+	 * No nos acordamos que era de un arreglo
+	 * 
+	 * @param arr
+	 * @return
+	 */
+	public static int contarPolidivisiblesArr(int[] arr) {
+		return contarPolidivisiblesArrAux(arr, 0, 0);
+	}
+
+	/**
+	 * No nos acordamos que era de un arreglo
+	 * 
+	 * @param arr
+	 * @param i
+	 * @param suma
+	 * @return
+	 */
+	private static int contarPolidivisiblesArrAux(int[] arr, int i, int suma) {
+		if (i == arr.length)
+			return suma;
+		return contarPolidivisiblesArrAux(arr, i + 1, suma + (esPolidivisible(arr[i]) ? 1 : 0));
 	}
 
 	private static boolean esPolidivisible(int n) {

@@ -2,9 +2,13 @@ package co.edu.uniquindio.p3.punto1;
 
 import java.util.Arrays;
 
+/**
+ * Haga una prueba de escritorio al siguiente código:
+ *
+ */
 public class Punto1 {
 	public static void main(String[] args) {
-		int arr[] = { 3, 2, 1, 7, 8, 6, 5, 4 };
+		int arr[] = { 7, 2, 1, 6, 8, 5, 3, 4 };
 		metodo1(arr, 0, arr.length - 1);
 		System.out.println(Arrays.toString(arr));
 	}

@@ -1,5 +1,13 @@
 package co.edu.uniquindio.p3.punto2;
 
+/**
+ * Dado un numero natural N, se calcula la raíz digital de N sumando los digitos
+ * que lo componen. El proceso se repite sobre el nuevo numero hasta que el
+ * resultado obtenido tiene un solo dígito.
+ * 
+ * @author Amador (Corem05) y Santiago (Tourment0412)
+ *
+ */
 public class RaizDigital {
 	public static void main(String[] args) {
 		int raizDig = calcularRaizDig(591);
