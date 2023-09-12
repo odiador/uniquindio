@@ -11,8 +11,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class ServerApp {
 
 	public static void startServer() {
-		try {
-			final ServerSocket serverSocket = new ServerSocket(10);
+		try (ServerSocket serverSocket = new ServerSocket(10)) {
 			AtomicInteger contIDs = new AtomicInteger();
 			System.out.println(prefix() + "Servidor iniciado [" + serverSocket.toString() + "]");
 			while (true) {

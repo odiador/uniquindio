@@ -18,8 +18,7 @@ public class ClientConnection {
 	}
 
 	private void run() {
-		try {
-			Scanner sc = new Scanner(System.in);
+		try (Scanner sc = new Scanner(System.in)) {
 			while (true) {
 				String s = sc.nextLine();
 				output.writeObject(s);
