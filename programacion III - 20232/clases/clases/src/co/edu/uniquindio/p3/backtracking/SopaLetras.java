@@ -34,6 +34,7 @@ public class SopaLetras {
 			String cadena = sc.nextLine();
 			System.out.println();
 			resolverSopa(sopa, cadena);
+			cant = 0;
 			System.out.print("Deseas continuar con la ejecucion? (y/n) ");
 			String next = sc.nextLine();
 			if (next.equalsIgnoreCase("n"))
