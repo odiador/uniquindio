@@ -17,7 +17,7 @@ public class SopaLetras {
 		Scanner sc = new Scanner(System.in);
 		boolean cerrar = false;
 		System.out.println("Bienvenido al Solucionador de sopas de letras.\n"
-				+ "Este fue hecho por: Juan Manuel Amador y Santiago Quintero\nLa sopa de letras es:\n");
+				+ "Este fue hecho por: Juan Manuel Amador y Santiago Quintero");
 		System.out.println("La tematica de la sopa de letras es de Peliculas de Marvel.");
 
 		final char[][] sopa = { "YWUEWUZAYSUJDUF".toCharArray(), "LOBLEXANAMNORIA".toCharArray(),
@@ -27,12 +27,13 @@ public class SopaLetras {
 				"SGINAOGXNRIBJDH".toCharArray(), "ELEPOPMANEOKTJJ".toCharArray(), "XRCLQZELEKTRARA".toCharArray(),
 				"SWBXAVENGERSKZP".toCharArray() };
 		do {
+			System.out.println("La sopa de letras es:");
 			imprimirSopa(sopa);
 			System.out.println(
-					"Las palabras a buscar de la sopa de letras son:\nAVENGERS, PANTERANEGRA, ANTMAN, THOR, DOCTORSTRANGE, IRONMAN, LOSETERNOS, HULK, DEADPOOL, XMEN, WOLVERINE, BLADE, ELEKTRA y DAREDEVIL.");
+					"Las palabras a buscar de la sopa de letras son:\nAVENGERS, PANTERANEGRA, ANTMAN, THOR, DOCTORSTRANGE,\nIRONMAN, LOSETERNOS, HULK, DEADPOOL, XMEN, WOLVERINE,\nBLADE, ELEKTRA y DAREDEVIL.");
+			System.out.println();
 			System.out.print("Escribe la palabra a buscar: ");
 			String cadena = sc.nextLine();
-			System.out.println();
 			resolverSopa(sopa, cadena);
 			cant = 0;
 			System.out.print("Deseas continuar con la ejecucion? (y/n) ");
