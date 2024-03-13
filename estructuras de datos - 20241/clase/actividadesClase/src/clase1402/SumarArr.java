@@ -7,7 +7,7 @@ public class SumarArr {
 		System.out.println(suma);
 	}
 
-	private static int sumar(int n) {
+	public static int sumar(int n) {
 		if (n == 0)
 			return 0;
 		return n + sumar(n - 1);

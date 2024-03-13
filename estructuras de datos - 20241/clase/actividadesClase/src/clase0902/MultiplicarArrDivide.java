@@ -16,7 +16,7 @@ public class MultiplicarArrDivide {
 			return arr[inicio];
 		}
 		int mitad = (inicio + fin) / 2;
-		return multiplicarArrAux(arr, inicio, mitad) * multiplicarArrAux(arr, mitad + 1, fin);
+		return multiplicarArrAux(arr, inicio, mitad) + multiplicarArrAux(arr, mitad + 1, fin);
 	}
 
 }
