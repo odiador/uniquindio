@@ -12,8 +12,8 @@ Este taller está realizado en java, más información se puede encontrar en el 
 
 ## Preguntas
 
-Dada la siguiente pila de ejemplo y teniedolos métodos: new Pila(),
-esVacia(), cima(), apilar(), desapilar():
+Dada la siguiente pila de ejemplo y teniedolos métodos: ```new Pila()```,
+```esVacia()```, ```cima()```, ```apilar()```, ```desapilar()```:
 
 > 10<br>
 > 20<br>
