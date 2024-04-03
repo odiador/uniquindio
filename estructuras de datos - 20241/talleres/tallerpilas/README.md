@@ -1,11 +1,16 @@
 # Laboratorio Pilas
 
 <div align="center">
-
-Made with 
-
-<img src="https://skillicons.dev/icons?i=java" />
-
+  <table>
+    <tr>
+      <td>
+        Made with Java
+      </td>
+      <td>
+        <img src="https://skillicons.dev/icons?i=java">
+      </td>
+    </tr>
+  </table>
 </div>
 
 Este taller está realizado en java, más información se puede encontrar en el siguiente [PDF](info/Taller%20pilas.pdf "PDF").
