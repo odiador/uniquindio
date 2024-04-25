@@ -1,5 +1,7 @@
 package tallercolas;
 
+import java.util.Comparator;
+
 public class Cola<T> implements Cloneable {
 	private Nodo nodoInicio;
 	private int size;
@@ -80,9 +82,40 @@ public class Cola<T> implements Cloneable {
 		return sb.toString();
 	}
 
+	public void agregarElemento(int pos, T elemento) {
+		if (pos < 0 || pos >= size)
+			throw new IndexOutOfBoundsException("La posicion tiene que estar en el tamano");
+		recorerCola(0, pos);
+		encolar(elemento);
+		recorerCola(pos, size);
+	}
+
+	private void recorerCola(int desde, int hasta) {
+		for (int i = desde; i < hasta; i++)
+			encolar(desencolar());
+	}
+
 	public boolean comparar(Cola<T> o) {
 		if (size != o.size)
 			return false;
 		return true;
+	}
+
+	public void ordenarCola(Comparator<T> comparator) {
+		if (size == 0 || size == 1)
+			return;
+		Cola<T> colaaux1 = new Cola<T>();
+		Cola<T> colaaux2 = new Cola<T>();
+		while (size > 0) {
+			T valor = desencolar();
+			if (colaaux1.estaVacia()) {
+
+			}
+		}
+
+	}
+
+	private boolean estaVacia() {
+		return nodoInicio == null;
 	}
 }
