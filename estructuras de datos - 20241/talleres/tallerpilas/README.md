@@ -13,7 +13,7 @@
   </table>
 </div>
 
-Este taller está realizado en java, más información se puede encontrar en el siguiente [PDF](info/Taller%20pilas.pdf "PDF").
+Este taller está realizado en java, por: Juan Manuel Amador, Juan Manuel Perdomo y Santiago Quintero. Más información se puede encontrar en el siguiente [PDF](info/Taller%20pilas.pdf "PDF").
 
 ## Preguntas
 
